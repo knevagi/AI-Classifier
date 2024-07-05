@@ -1,0 +1,8 @@
+.card{
+    padding:1rem;
+    border: 1px solid #000;
+}
+.fade-out {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+  }
