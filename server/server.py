@@ -15,11 +15,11 @@ CORS(app, origins=["http://localhost:3000"])
 @app.route('/api/getClasses/<className>', methods=['GET'])
 def getClasses(className):
     if(className == 'Food'):
-        df = pd.read_csv('C:\\Prev Laptop Files\\PythonProject\\my-app\\public\\assets\\data\\train_classes.csv')
+        df = pd.read_csv('C:\\Prev Laptop Files\\PythonProject\\AI-Classifier\\server\\data\\train_classes.csv')
 
         # Convert the 'classes' column to a dictionary
         classes_dict = df['Classes'].to_dict()
-
+        
         # Convert the dictionary to a JSON object
         json_data = [{'index': key, 'value': value} for key, value in classes_dict.items()]
 
@@ -47,12 +47,12 @@ def upload_file():
     file = request.files['file']
     filename = secure_filename(file.filename)
     file.save(os.path.join(directory, filename))
-    df = pd.read_csv('C:\\Prev Laptop Files\\PythonProject\\my-app\\public\\assets\\data\\train_classes.csv')
+    df = pd.read_csv('C:\\Prev Laptop Files\\PythonProject\\AI-Classifier\\server\\data\\train_classes.csv')
 
     # Convert the 'classes' column to a list
     classes_list = df['Classes'].tolist()
 
-    model_path = 'C:\\Prev Laptop Files\\PythonProject\\my-app\\server\\models\\food101_efficientnet_b0_adam_0.001lr_10epochs_withaaugmentation_100%_data_64batchsize_anotherone_.pth'
+    model_path = 'C:\\Prev Laptop Files\\PythonProject\\AI-Classifier\\server\\models\\food101_efficientnet_b0_adam_0.001lr_10epochs_withaaugmentation_100%_data_64batchsize_anotherone_.pth'
 
     loaded_model = torchvision.models.efficientnet_b0() # we do not specify ``weights``, i.e. create untrained model
     loaded_model.to(device)
