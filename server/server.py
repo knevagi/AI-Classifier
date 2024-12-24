@@ -15,7 +15,7 @@ CORS(app, origins=["http://localhost:3000"])
 @app.route('/api/getClasses/<className>', methods=['GET'])
 def getClasses(className):
     if(className == 'Food'):
-        df = pd.read_csv('C:\\Prev Laptop Files\\PythonProject\\AI-Classifier\\server\\data\\train_classes.csv')
+        df = pd.read_csv('data\\train_classes.csv')
 
         # Convert the 'classes' column to a dictionary
         classes_dict = df['Classes'].to_dict()
