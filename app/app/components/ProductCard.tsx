@@ -27,7 +27,7 @@ const ProductCard = () => {
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Flower Classifier!</h2>
-                <p>Recognize Nature's Blossoms 🌸</p>
+                <p>Recognize Nature&apos;s Blossoms 🌸</p>
                 <div className="card-actions">
                 <Link className='btn btn-primary' href={{ pathname: "/classifier", 
                         query: { name: "Flower"}}}>Try Now</Link>
