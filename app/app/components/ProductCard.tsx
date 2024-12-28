@@ -12,10 +12,9 @@ const ProductCard = () => {
                 <img src="\assets\img\burger.jpg" alt="Food" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Food Classifier!</h2>
-                <p>Identify Edible Delights 🍔</p>
+                <h2 className="card-title" style={{color:'black'}}>Food Classifier!</h2>
+                <p style={{color:'black'}}>Identify Edible Delights 🍔</p>
                 <div className="card-actions">
-                    {/* <button className="btn btn-primary">Try Now</button> */}
                    <Link className='btn btn-primary' href={{ pathname: "/classifier", 
    query: { name: "Food"}}}>Try Now</Link>
                 </div>
@@ -26,8 +25,8 @@ const ProductCard = () => {
                 <img src="\assets/img/flower.jpg" alt="Flower" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Flower Classifier!</h2>
-                <p>Recognize Nature&apos;s Blossoms 🌸</p>
+                <h2 className="card-title" style={{color:'black'}}>Flower Classifier!</h2>
+                <p style={{color:'black'}}>Recognize Nature&apos;s Blossoms 🌸</p>
                 <div className="card-actions">
                 <Link className='btn btn-primary' href={{ pathname: "/classifier", 
                         query: { name: "Flower"}}}>Try Now</Link>
